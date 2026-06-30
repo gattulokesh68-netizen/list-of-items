@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Item Voting App</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🗳️ Item Voting Application</h1>
+      <p>Vote for your favorite items!</p>
+    </header>
+
+    <main>
+      <!-- Add Item Section -->
+      <section class="add-item-section">
+        <h2>Add New Item</h2>
+        <form id="addItemForm">
+          <div class="form-group">
+            <input
+              type="text"
+              id="itemTitle"
+              placeholder="Item title"
+              required
+              maxlength="100"
+            />
+          </div>
+          <div class="form-group">
+            <textarea
+              id="itemDescription"
+              placeholder="Item description (optional)"
+              maxlength="500"
+              rows="3"
+            ></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Add Item</button>
+        </form>
+      </section>
+
+      <!-- Items List Section -->
+      <section class="items-section">
+        <h2>Items</h2>
+        <div id="itemsList" class="items-list">
+          <div class="loading">Loading items...</div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 Item Voting App | Built with Node.js & SQLite</p>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
